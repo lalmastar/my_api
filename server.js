@@ -30,11 +30,7 @@ app.use(cors({
   allowedHeaders: ['X-PINGOTHER', 'Content-Type',"Authorization","Origin", 'HEAD', 'OPTIONS',"Accept","Cache-Control",'Cookie','X-Requested-With'],
   credentials: true
 }))
-app.use('/api', (res, res){
-  res.send({
-    message: "Server is running" 
-  })
-};
+
 app.use('/api/users', userRoutes);
 app.use("/api/product", productsRoute);
 app.use("/api/client", clientRoute);
